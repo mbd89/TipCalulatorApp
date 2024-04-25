@@ -21,3 +21,6 @@ Users will be able to:
 - CSS Grid
 - Mobile-first workflow
 - Javascript
+#  What I learned 
+IF you want to put focus state on a div., meaning it changes color after you click on it, and am not saying changes color and goes back to its original color, but it changes color and stays with the new color: you have to use tabindex="0" in the html. 
+Thats how i have the tip percentage stay with the bright green color after you click. since those are not buttons focus state does not work without tabindex in the html. 
