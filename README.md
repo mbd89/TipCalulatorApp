@@ -1,5 +1,5 @@
 # TipCalulatorApp
-# Live Site URl:
+# Live Site URL: https://mbd89.github.io/TipCalulatorApp/
 
 # Frontend Mentor - Tip calculator app solution
 
