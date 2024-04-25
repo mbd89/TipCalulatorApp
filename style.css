@@ -1,0 +1,330 @@
+:root {
+
+
+    --darkCyan: hsl(183, 100%, 15%);
+    --darkGrayishCyan: hsl(186, 14%, 43%);
+    --grayishcyan: hsl(184, 14%, 56%);
+    --lightGrayishCyan: hsl(185, 41%, 84%);
+    --veryLightGrayishCyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+    --lightGreen: #26C2AE;
+
+}
+
+body {
+    font-family: 'Space mono';
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    font-weight: bold;
+    background: var(--lightGrayishCyan);
+
+}
+
+main {
+    display: grid;
+    place-items: center;
+
+}
+
+.container {
+    background: white;
+    width: 100%;
+    border-radius: 25px;
+    padding-block: 2em;
+    display: grid;
+    place-items: center;
+    margin-block-end: 2em;
+
+}
+
+header {
+    padding-block: 2em
+}
+
+label {
+    color: var(--darkCyan);
+
+}
+
+.billAmount {
+    padding-block-end: 1em;
+
+}
+
+
+.bill-info {
+    margin-block-end: 2em;
+    width: clamp(19.4375rem, 17.941021126760564rem + 6.384976525821597vw, 23.6875rem);
+}
+
+.tip-block {
+    border-radius: 15px;
+    background: var(--darkCyan);
+    color: white;
+    padding-inline: 1em;
+    width: clamp(19.4375rem, 17.941021126760564rem + 6.384976525821597vw, 23.6875rem);
+    margin-inline: 2em;
+}
+
+
+
+input {
+    background-color: var(--veryLightGrayishCyan);
+    border: none;
+    width: 90%;
+    padding: 0.5em;
+    padding-inline: 1em;
+    font-weight: bold;
+    color: var(--darkCyan);
+    font-size: 1.5em;
+    font-family: 'Space mono';
+}
+
+.tip-amount.custom input {
+    font-size: 0.8em;
+}
+
+.validate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.invalid {
+    color: #E17457;
+    padding-inline-end: 1em;
+}
+
+.failure {
+    border: 2px solid#E17457;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: inline-block;
+}
+
+.tip-percentage {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 1em;
+    margin-block-end: 1em;
+}
+
+.tip-percentage div {
+    display: grid;
+    place-items: center;
+    padding-block: 0.2em;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.5em;
+    background-color: var(--darkCyan);
+    color: white;
+
+}
+
+.tip-amount.custom {
+    background-color: var(--veryLightGrayishCyan);
+}
+
+.tip-percentage p {
+    color: var(--darkCyan);
+}
+
+.tip-block span {
+    color: var(--grayishcyan);
+}
+
+
+#tip-id,
+#tip-add {
+    font-size: 2em;
+    color: var(--lightGreen);
+}
+
+.tip-count,
+.tip-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.icon2 {
+    background: url('images/icon-person.svg') no-repeat 5%;
+    background-size: 15px;
+}
+
+.icon1 {
+    background: url("images/icon-dollar.svg") no-repeat 5%;
+    background-size: 15px;
+    padding-left: 30px;
+}
+
+
+#bill-amount,
+#number-people {
+    background-color: #F3F9FA;
+    text-align: right;
+}
+
+#bill-amount::placeholder,
+#number-people::placeholder {
+    color: #9EBBBD;
+}
+
+
+.tip-amount-5,
+.tip-amount-10,
+.tip-amount-15,
+.tip-amount-25,
+.tip-amount-50 {
+    cursor: pointer;
+}
+
+.tip-amount-5:hover,
+.tip-amount-10:hover,
+.tip-amount-15:hover,
+.tip-amount-25:hover,
+.tip-amount-50:hover {
+    background: #9FE8DF;
+}
+
+.tip-amount-15:focus,
+.tip-amount-5:focus,
+.tip-amount-10:focus,
+.tip-amount-25:focus,
+.tip-amount-50:focus {
+    background-color: #26C2AE;
+}
+
+
+button {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    background: var(--lightGreen);
+    color: var(--darkCyan);
+    font-weight: bold;
+    font-size: 1.25em;
+    border-radius: 5px;
+    border: none;
+    padding-block: 1em;
+    margin-block-end: 1em;
+
+}
+
+button:hover {
+    background: #9FE8DF !important;
+    cursor: pointer;
+}
+
+input[type='number']:focus {
+    outline: 2px solid #26C2AE;
+    border-radius: 5px;
+}
+
+@media screen and (min-width:1024px) {
+    .container {
+        display: flex;
+        gap: 2em;
+        padding-inline-start: 2em;
+        margin-block-end: 2em;
+    }
+
+    header {
+        padding-block: 6em 3em;
+    }
+
+    .bill-info {
+        margin-block-end: 0;
+    }
+
+    .tip-block {
+        margin-inline: 0;
+        height: 100%;
+    }
+
+    .tip-count,
+    .tip-total {
+        padding-inline: 1em;
+    }
+
+    .tip-total {
+        margin-block-end: 11em;
+    }
+
+    button {
+        width: 90%;
+        margin-inline: 1em;
+        margin-block-end: 2em;
+    }
+}
+
+/*.bill-info{
+    border: 1px solid red;
+    margin-block-end: 2em;
+    width:clamp(19.4375rem, 17.941021126760564rem + 6.384976525821597vw, 23.6875rem);
+}
+.tip-block{
+    border-radius: 15px;
+    background: var(--darkCyan);
+    color: white;
+    padding-inline:1em;
+    width:clamp(19.4375rem, 17.941021126760564rem + 6.384976525821597vw, 23.6875rem);
+    margin-inline:2em;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+#I implement a program that prompts the user for a fraction, 
+#formatted as X/Y, wherein each of X and Y is an integer, 
+#and then outputs, as a percentage rounded to the nearest integer,
+#how much fuel is in the tank. If, though, 1% or
+#less remains, output E instead to indicate that the tank 
+#is essentially empty. And if 99% or more remains, output F 
+#instead to indicate that the tank is essentially full.
+
+
+
+$ python fuel.py                                                                
+Fraction: cat/dog                                                               
+Fraction: 1/4                                                                   
+25%                                                                             
+$ python fuel.py                                                                
+Fraction: 1/2                                                                   
+50%                                                                             
+$ python fuel.py                                                                
+Fraction: 3/4                                                                   
+75%                                                                             
+$ python fuel.py  
+
+
+
+
+
+*/
